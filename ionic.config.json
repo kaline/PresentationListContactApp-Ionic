@@ -1,0 +1,7 @@
+{
+  "name": "PresentationContactListApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
