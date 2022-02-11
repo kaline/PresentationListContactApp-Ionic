@@ -5,5 +5,18 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
- 
+  public appPages = [
+    { title: 'Home', url: '/home', icon: 'home' },
+    { title: 'Contacts', url: '/contact-list', icon: 'person' },
+    { title: 'Mensages', url: '/mensages', icon: 'paper-plane' },
+    { title: 'Favorites', url: '/Favorites', icon: 'heart' },
+    { title: 'Archived', url: '/Archived', icon: 'archive' },
+    { title: 'Trash', url: '/Trash', icon: 'trash' },
+    { title: 'Spam', url: '/Spam', icon: 'warning' },
+    { title: 'Sign', url: '/signin', icon: 'persons' },
+    { title: 'SignUp', url: '/signup', icon: 'persons' },
+
+  ];
+  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+
 }
