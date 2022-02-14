@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { element } from 'protractor';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  items=[{}, {}];
 
-  constructor() { }
+  constructor( private userService: UserService) {
+   this.items = this.userService.simulateData();
+  }
 
   ngOnInit() {
 
