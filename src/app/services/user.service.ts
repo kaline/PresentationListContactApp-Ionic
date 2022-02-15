@@ -1,15 +1,22 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  films: any;
 
-  constructor() { }
+  constructor(public httpClient: HttpClient) { }
 
   getUsers(){
     //fazer uma http rerquest an return to screen
-
+    this.films = this.httpClient.get('https://swapi.co/api/films');
+    this.films
+    .subscribe(data => {
+      console.log('my data: ', data);
+    });
   }
 
   simulateData(){
